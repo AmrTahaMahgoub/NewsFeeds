@@ -7,7 +7,7 @@ import {
   RefreshControl,
 } from 'react-native';
 
-import { Header,  Text} from '../../components';
+import {Header, Text} from '../../components';
 import {useNavigationHooks} from '../../hooks/navigation-hooks';
 import {MainAppStackTypes} from '../../navigation/navigation-types';
 import {styles} from './styles';
@@ -57,21 +57,19 @@ const Home: FC = () => {
       <Header
         title="News"
         search
-        placeholder="Search..."
         value={searchedData}
         onChangeText={text => setSearchedData(text)}
       />
       {loading ? (
         <ActivityIndicator size="large" color="#432E9D" />
       ) : error ? (
-        <View
-          style={styles.errorContainer}>
-          <Text fontSize='FS18'>Error: {error}</Text>
+        <View style={styles.errorContainer}>
+          <Text fontSize="FS18">Error: {error}</Text>
         </View>
       ) : (
         <FlatList
           contentContainerStyle={{
-            backgroundColor: "white",
+            backgroundColor: 'white',
           }}
           data={filteredNews}
           renderItem={RenderNewsItem}

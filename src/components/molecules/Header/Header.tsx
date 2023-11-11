@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({
       {isSearch && (
         <Input
           style={styles.input}
-          placeholder="search ..."
+          placeholder="Search ..."
           value={value}
           onChangeText={onChangeText}
         />

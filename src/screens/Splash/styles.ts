@@ -1,6 +1,6 @@
 import {StyleSheet} from "react-native";
 import {Colors} from "../../styles";
-import { getHeight, getWidth } from "../../styles/dimensions";
+import { getHeight, getWidth, scale } from "../../styles/dimensions";
 
 export const styles = StyleSheet.create({
   rootScreen: {
@@ -14,7 +14,10 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   image:{
-    width: getWidth(150),
-    height: getHeight(200),
+    width: scale(150),
+    height: scale(150),
+    borderRadius:scale(16),
+    borderWidth:1,
+    borderColor:Colors.GRAY_F7F8FA
   }
 });

@@ -1,27 +1,10 @@
-import React, {FC, useEffect} from 'react';
-import {FlatList, ListRenderItem, StyleSheet, View} from 'react-native';
-import {useSharedValue} from 'react-native-reanimated';
-import {
-  AnimatedFlatList,
-  Button,
-  Header,
-  Image,
-  Line,
-  Text,
-} from '../../components';
-import {useNavigationHooks} from '../../hooks/navigation-hooks';
+import React, {FC} from 'react';
+import {View} from 'react-native';
+import {Header, Image, Text} from '../../components';
 import {MainAppStackTypes} from '../../navigation/navigation-types';
-
-import NewsItem from '../../components/organisms/NewsItem/NewsItem';
-import {NewsType} from '../../@types';
-import {useAppSelector} from '../../hooks/useAppSelector';
-import {getNewsAction} from '../../redux/actions/NewsAction';
-import {useDispatch} from 'react-redux';
-import {getHeight, getWidth, scale} from '../../styles/dimensions';
 import {RouteProp, useRoute} from '@react-navigation/native';
-import {Colors, Spacing} from '../../styles';
 import moment from 'moment';
-import { styles } from './styles';
+import {styles} from './styles';
 
 const Details: FC = () => {
   const {
@@ -31,28 +14,31 @@ const Details: FC = () => {
     <View style={styles.main}>
       <Header backTitle title={'Details'} />
       <View style={styles.container}>
+      <Text fontSize="FS11" style={styles.publishedAt}>
+          {moment(newsDetails.publishedAt).fromNow()}
+        </Text>
+        <Text numberOfLines={2} fontSize="FS20" fontFamily="BOLD" style={styles.title}>
+          {newsDetails.title}
+        </Text>
         <Image
           resizeMode="cover"
           style={styles.image}
           source={{uri: newsDetails.urlToImage}}
         />
-        <Text fontSize="FS18" fontFamily="BOLD">
-          {newsDetails.title}
-        </Text>
 
-        <Text numberOfLines={5} style={styles.description} fontSize="FS14">
+        <Text numberOfLines={5} style={styles.description} fontSize="FS14" color="GRAY_8D8D8D">
           {newsDetails.description}
         </Text>
-        <Text fontSize="FS14" style={styles.author}>
+        <Text numberOfLines={5} style={styles.description} fontSize="FS14" color="GRAY_8D8D8D">
+          {newsDetails.content}
+        </Text>
+        <Text fontSize="FS14" style={styles.author} color="GRAY_8D8D8D">
           {newsDetails.author}
         </Text>
-        <Text fontSize="FS11" style={styles.publishedAt}>
-          {moment(newsDetails.publishedAt).fromNow()}
-        </Text>
+       
       </View>
     </View>
   );
 };
-
 
 export default Details;

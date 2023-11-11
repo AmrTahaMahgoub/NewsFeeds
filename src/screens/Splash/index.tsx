@@ -48,7 +48,7 @@ const Splash = () => {
             transform: [{translateX: imageSlideAnim}],
           }}>
           <Image
-            source={Images.news}
+            source={Images.dynamic}
             style={styles.image}
           />
         </Animated.View>

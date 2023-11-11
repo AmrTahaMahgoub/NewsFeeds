@@ -23,6 +23,9 @@ type FontSizeTypes = {
   FS7: number;
   FS10: number;
   FS8: number;
+  FS24:number;
+  FS20:number;
+  FS22:number;
 };
 
 export const REGULAR = I18nManager.isRTL
@@ -42,6 +45,9 @@ export const H3 = scale(12);
 export const H4 = scale(9);
 export const P = scale(12);
 export const FS18 = scale(18);
+export const FS24 = scale(24);
+export const FS20 = scale(20);
+export const FS22 = scale(22);
 export const FS14 = scale(14);
 export const FS16 = scale(16);
 export const FS11 = scale(11);

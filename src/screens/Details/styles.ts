@@ -3,12 +3,17 @@ import {Colors, Spacing} from '../../styles';
 import {getHeight, getWidth, scale} from '../../styles/dimensions';
 
 export const styles = StyleSheet.create({
-  main: {paddingHorizontal: Spacing.S16, backgroundColor: 'white', height:"100%"},
+  main: {
+    paddingHorizontal: Spacing.S16,
+    backgroundColor: 'white',
+    height: '100%',
+  },
   image: {
-    width: getWidth(300),
+    width: '100%',
     height: getHeight(250),
-    borderRadius: scale(25),
-    marginLeft: Spacing.S8,
+    // borderRadius: scale(25),
+    //marginLeft: Spacing.S8,
+    marginVertical: Spacing.S16,
   },
   container: {
     height: '80%',
@@ -16,13 +21,10 @@ export const styles = StyleSheet.create({
     paddingVertical: Spacing.S40,
     paddingHorizontal: Spacing.S20,
     marginVertical: Spacing.S4,
-    justifyContent: 'space-between',
     alignItems: 'flex-start',
     alignSelf: 'center',
-    borderRadius: scale(25),
-    borderColor: Colors.PRIMARY,
-    borderWidth: 1,
   },
+  title: {width: getWidth(280)},
 
   description: {
     marginBottom: Spacing.S8,

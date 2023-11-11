@@ -10,7 +10,7 @@ import {getHeight, getWidth, scale} from '../../../styles/dimensions';
 import {getNewsAction} from '../../../redux/actions/NewsAction';
 import {StyleSheet, View} from 'react-native';
 import {Colors, Spacing} from '../../../styles';
-import { styles } from './styles';
+import {styles} from './styles';
 
 type NewsItemProps = {
   item: NewsType;
@@ -21,18 +21,33 @@ function NewsItem({item, onPress}: NewsItemProps) {
   const {navigate} = useNavigationHooks<MainAppStackTypes>();
 
   return (
-    <Card
-      onPress={onPress}
-      style={styles.card}>
-      <Image style={styles.image} source={{uri: item.urlToImage}} />
-      <Text
-        numberOfLines={2}
-        fontSize="FS13"
-        fontFamily="BOLD"
-        color="GRAY_474C5C"
-        style={{width: getWidth(250), textAlign: 'center'}}>
-        {item.title}
-      </Text>
+    <Card onPress={onPress} style={styles.card}>
+      <Image
+        resizeMode="cover"
+        style={styles.image}
+        source={{uri: item.urlToImage}}
+      />
+      <View
+        style={{
+          flexDirection: 'column',
+          backgroundColor: 'white',
+          justifyContent: 'space-between',
+          height:getHeight(100),
+          width:getWidth(220),
+          marginLeft:Spacing.S8,
+        }}>
+        <Text
+          numberOfLines={2}
+          fontSize="FS13"
+          fontFamily="BOLD"
+          color="GRAY_474C5C"
+          style={{width: getWidth(220), textAlign: 'left'}}>
+          {item.title}
+        </Text>
+        <Text fontSize="FS11" style={styles.publishedAt}>
+          {moment(item.publishedAt).fromNow()}
+        </Text>
+      </View>
     </Card>
   );
 }

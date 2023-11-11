@@ -36,6 +36,6 @@ export const styles = StyleSheet.create({
     marginHorizontal: Spacing.S16,
     alignSelf: 'center',
     borderColor: Colors.GRAY_EEEEEE,
-    marginBottom: Spacing.S8,
+    marginBottom: Spacing.S16,
   },
 });
