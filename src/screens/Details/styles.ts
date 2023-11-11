@@ -3,7 +3,7 @@ import {Colors, Spacing} from '../../styles';
 import {getHeight, getWidth, scale} from '../../styles/dimensions';
 
 export const styles = StyleSheet.create({
-  main: {paddingHorizontal: Spacing.S16, backgroundColor: 'white'},
+  main: {paddingHorizontal: Spacing.S16, backgroundColor: 'white', height:"100%"},
   image: {
     width: getWidth(300),
     height: getHeight(250),

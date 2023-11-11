@@ -1,11 +1,11 @@
-import {StyleSheet} from "react-native";
-import {getHeight, getWidth} from "../../../styles/dimensions";
-import {Colors, Spacing} from "../../../styles";
+import {StyleSheet} from 'react-native';
+import {getHeight, getWidth} from '../../../styles/dimensions';
+import {Colors, Spacing} from '../../../styles';
 
 export const styles = StyleSheet.create({
   container: {
-    justifyContent: "space-between",
-    alignItems: "center",
+    justifyContent: 'space-between',
+    alignItems: 'center',
     //backgroundColor: "white",
     paddingHorizontal: 0,
   },
@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     flex: 3,
-    textAlign: "center",
+    textAlign: 'center',
     marginRight: Spacing.S40,
   },
   iconStyle: {
@@ -23,9 +23,9 @@ export const styles = StyleSheet.create({
     color: Colors.BLACK,
   },
   row: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   backText: {
     color: Colors.PRIMARY,
@@ -34,7 +34,8 @@ export const styles = StyleSheet.create({
   input: {
     width: getWidth(330),
     marginHorizontal: Spacing.S16,
-    alignSelf: "center",
-    borderColor:Colors.BLACK
+    alignSelf: 'center',
+    borderColor: Colors.GRAY_EEEEEE,
+    marginBottom: Spacing.S8,
   },
 });

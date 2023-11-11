@@ -29,7 +29,8 @@ function NewsItem({item, onPress}: NewsItemProps) {
         numberOfLines={2}
         fontSize="FS13"
         fontFamily="BOLD"
-        style={{width: getWidth(250), textAlign: 'left'}}>
+        color="GRAY_474C5C"
+        style={{width: getWidth(250), textAlign: 'center'}}>
         {item.title}
       </Text>
     </Card>

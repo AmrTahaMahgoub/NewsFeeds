@@ -6,8 +6,8 @@ import {
   ActivityIndicator,
   RefreshControl,
 } from 'react-native';
-import {useSharedValue} from 'react-native-reanimated';
-import {AnimatedFlatList, Button, Header, Line, Text} from '../../components';
+
+import { Header,  Text} from '../../components';
 import {useNavigationHooks} from '../../hooks/navigation-hooks';
 import {MainAppStackTypes} from '../../navigation/navigation-types';
 import {styles} from './styles';
@@ -71,7 +71,7 @@ const Home: FC = () => {
       ) : (
         <FlatList
           contentContainerStyle={{
-            backgroundColor: Colors.GRAY_EEEEEE,
+            backgroundColor: "white",
           }}
           data={filteredNews}
           renderItem={RenderNewsItem}
